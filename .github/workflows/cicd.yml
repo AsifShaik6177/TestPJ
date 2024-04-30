@@ -29,9 +29,8 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          npm install
-          npm i -g nx
-          nx run-many --target=build --projects=play-junction-be,play-junction-fe
+          npm install && npm i -g nx && nx run-many --target=build --projects=play-junction-be,play-junction-fe
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
